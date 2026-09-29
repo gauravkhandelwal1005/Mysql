@@ -1,0 +1,17 @@
+CREATE TABLE Course(CourseID INT PRIMARY KEY, CourseName VARCHAR(50) UNIQUE NOT NULL);
+INSERT INTO Course VALUES(101, 'BCA'),(102, 'MCA');
+
+CREATE TABLE STUDENT(
+  RollNo INT PRIMARY KEY,
+  Name VARCHAR(50) NOT NULL,
+  Email VARCHAR(50) UNIQUE,
+  Marks INT CHECK (Marks >= 0 AND Marks <= 100),
+  CourseID INT,
+  FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
+
+INSERT INTO STUDENT VALUES(1, 'Gaurav','gaurav@gmail.com',99,101);
+INSERT INTO STUDENT VALUES(2, 'kartik','kartik@gmail.com',86,102);
+SELECT * FROM Course;
+SELECT * FROM STUDENT;
+
