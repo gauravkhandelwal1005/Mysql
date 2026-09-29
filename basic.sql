@@ -1,0 +1,12 @@
+CREATE TABLE STUDENT (
+  ROLLNO INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Course VARCHAR(50)
+);
+--alter table
+ALTER TABLE STUDENT ADD city VARCHAR(30);
+INSERT INTO STUDENT (ROLLNO, Name, Course, city) 
+VALUES (1, 'Gaurav', 'BTech', 'Gurugram');
+
+SELECT * FROM STUDENT;
+
